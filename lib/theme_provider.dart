@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ThemeProvider with ChangeNotifier {
-  // Default Theme A
+  // Default Theme (Blue)
   ThemeData _themeData = ThemeData(
     primarySwatch: Colors.blue,
     scaffoldBackgroundColor: Colors.white,
@@ -34,6 +34,19 @@ class ThemeProvider with ChangeNotifier {
         scaffoldBackgroundColor: Colors.red[50],
         textTheme: TextTheme(bodyMedium: GoogleFonts.roboto()),
       );
+    } else if (themeIndex == 3) {
+      _themeData = ThemeData(
+        primarySwatch: Colors.yellow,
+        scaffoldBackgroundColor: Colors.yellow[50],
+        textTheme: TextTheme(bodyMedium: GoogleFonts.roboto()),
+      );
+    } else if (themeIndex == 4) { // Dark Theme
+      _themeData = ThemeData(
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: Colors.black,
+        textTheme: TextTheme(bodyMedium: GoogleFonts.roboto(color: Colors.white)),
+        appBarTheme: AppBarTheme(backgroundColor: Colors.black),
+      );
     } else {
       _themeData = ThemeData(
         primarySwatch: Colors.blue,
@@ -52,6 +65,8 @@ class ThemeProvider with ChangeNotifier {
       _fontStyle = GoogleFonts.lobster();
     } else if (fontIndex == 2) {
       _fontStyle = GoogleFonts.montserrat();
+    } else if (fontIndex == 3) {
+      _fontStyle = GoogleFonts.poppins(); // Tambahan Font Poppins
     } else {
       _fontStyle = GoogleFonts.roboto();
     }

@@ -14,7 +14,9 @@ class SettingsScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Dropdown untuk Tema
             Text('Select Theme:', style: themeProvider.fontStyle),
             DropdownButton<int>(
               value: themeProvider.currentThemeIndex,
@@ -24,12 +26,16 @@ class SettingsScreen extends StatelessWidget {
                 }
               },
               items: [
-                DropdownMenuItem(value: 0, child: Text('Theme A')),
-                DropdownMenuItem(value: 1, child: Text('Theme B')),
-                DropdownMenuItem(value: 2, child: Text('Theme C')),
+                DropdownMenuItem(value: 0, child: Text('Blue')),
+                DropdownMenuItem(value: 1, child: Text('Green')),
+                DropdownMenuItem(value: 2, child: Text('Red')),
+                DropdownMenuItem(value: 3, child: Text('Yellow')),
+                DropdownMenuItem(value: 4, child: Text('Dark')),
               ],
             ),
             SizedBox(height: 20),
+
+            // Dropdown untuk Font
             Text('Select Font:', style: themeProvider.fontStyle),
             DropdownButton<int>(
               value: themeProvider.currentFontIndex,
@@ -42,7 +48,15 @@ class SettingsScreen extends StatelessWidget {
                 DropdownMenuItem(value: 0, child: Text('Roboto')),
                 DropdownMenuItem(value: 1, child: Text('Lobster')),
                 DropdownMenuItem(value: 2, child: Text('Montserrat')),
+                DropdownMenuItem(value: 3, child: Text('Poppins')),
               ],
+            ),
+            SizedBox(height: 20),
+
+            // Kalimat untuk mengecek fungsi font
+            Text(
+              'MARIO SAMUEL BUDIONO - 535230091.',
+              style: themeProvider.fontStyle.copyWith(fontSize: 20),
             ),
           ],
         ),
