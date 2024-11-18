@@ -105,7 +105,7 @@ class SettingsScreen extends StatelessWidget {
 
             // Kalimat untuk Mengecek Font
             Text(
-              'This is a sample sentence to test the selected font.',
+              'Mario Samuel Budiono - 535230091',
               style: themeProvider.fontStyle.copyWith(fontSize: 20),
             ),
           ],
