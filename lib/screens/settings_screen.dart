@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import '../theme_provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -52,7 +51,7 @@ class SettingsScreen extends StatelessWidget {
             ),
             ListTile(
               leading: CircleAvatar(backgroundColor: Colors.black),
-              title: Text('Midnight Bliss (Dark)', style: themeProvider.fontStyle),
+              title: Text('Midnight Bliss (Dark)', style: themeProvider.fontStyle.copyWith(color: Colors.white)),
               trailing: Icon(Icons.check, color: themeProvider.currentThemeIndex == 4 ? Colors.white : Colors.grey),
               onTap: () => themeProvider.setTheme(4),
             ),
@@ -66,9 +65,10 @@ class SettingsScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
 
-            // Pilihan Font dengan ElevatedButton
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+            // Pilihan Font dengan Wrap
+            Wrap(
+              spacing: 8.0, // Jarak horizontal antar tombol
+              runSpacing: 8.0, // Jarak vertical antar tombol jika berpindah baris
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -105,7 +105,7 @@ class SettingsScreen extends StatelessWidget {
 
             // Kalimat untuk Mengecek Font
             Text(
-              'This is a sample sentence to test the selected font.',
+              'Mario Samuel Budiono (535230091)',
               style: themeProvider.fontStyle.copyWith(fontSize: 20),
             ),
           ],

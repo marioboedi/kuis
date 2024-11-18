@@ -17,7 +17,7 @@ class MainScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Hello, this is the Main Screen!',
+              'Welcome, Mario Samuel!',
               style: themeProvider.fontStyle.copyWith(fontSize: 24),
             ),
             SizedBox(height: 20),
