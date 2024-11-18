@@ -75,7 +75,7 @@ class SettingsScreen extends StatelessWidget {
                     backgroundColor: themeProvider.currentFontIndex == 0 ? Colors.indigo : Colors.grey[300],
                   ),
                   onPressed: () => themeProvider.setFont(0),
-                  child: Text('Roboto', style: GoogleFonts.roboto(fontSize: 16)),
+                  child: Text('Pacifico', style: GoogleFonts.pacifico(fontSize: 16)), // Font Baru
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -89,7 +89,7 @@ class SettingsScreen extends StatelessWidget {
                     backgroundColor: themeProvider.currentFontIndex == 2 ? Colors.orange : Colors.grey[300],
                   ),
                   onPressed: () => themeProvider.setFont(2),
-                  child: Text('Montserrat', style: GoogleFonts.montserrat(fontSize: 16)),
+                  child: Text('Sedgwick Ave', style: GoogleFonts.sedgwickAve(fontSize: 16)), // Ganti Montserrat
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -105,7 +105,7 @@ class SettingsScreen extends StatelessWidget {
 
             // Kalimat untuk Mengecek Font
             Text(
-              'Mario Samuel Budiono (535230091)',
+              'This is a sample sentence to test the selected font.',
               style: themeProvider.fontStyle.copyWith(fontSize: 20),
             ),
           ],
